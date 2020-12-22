@@ -33,6 +33,7 @@ public class GithubProvider {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url("https://api.github.com/user?access_token=" + accesstoken)
+                //Spring的post请求规范已更新，需添加请求header，否则会返回空值
                 .header("Authorization","token "+accesstoken)
                 .build();
         try {
