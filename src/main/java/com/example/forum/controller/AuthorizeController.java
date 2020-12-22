@@ -38,16 +38,15 @@ public class AuthorizeController {
 
         String accesstoken = githubProvider.getAccessToken(accesstokenDTO);
         GithubUser user = githubProvider.getUser(accesstoken);
-        System.out.println(user.getName());
-        return "redirect:/";
-//        if(user != null){
-//            //登录成功，写cookie和session
-//            req.getSession().setAttribute("user", user);
-//            System.out.println(user.getBio());
-//            return "redirect:/";
-//        }else{
-//            //登录失败，重新登录
-//        }
-//        return "index";
+
+        if(user != null){
+            //登录成功，写cookie和session
+            req.getSession().setAttribute("user", user);
+            System.out.println(user.getBio());
+            return "redirect:/";
+        }else{
+            //登录失败，重新登录
+        }
+        return "index";
     }
 }
