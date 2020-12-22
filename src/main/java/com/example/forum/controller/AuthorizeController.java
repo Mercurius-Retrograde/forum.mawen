@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class AuthorizeController {
 
@@ -25,18 +27,27 @@ public class AuthorizeController {
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code")String code,
-                           @RequestParam(name = "state")String state){
-        AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
-        accessTokenDTO.setClient_id(clientId);
-        accessTokenDTO.setClient_secret(clientSecret);
-        accessTokenDTO.setCode(code);
-        accessTokenDTO.setRedirect_uri(clientUri);
-        accessTokenDTO.setState(state);
+                           @RequestParam(name = "state")String state,
+                           HttpServletRequest req){
+        AccessTokenDTO accesstokenDTO = new AccessTokenDTO();
+        accesstokenDTO.setClient_id(clientId);
+        accesstokenDTO.setClient_secret(clientSecret);
+        accesstokenDTO.setCode(code);
+        accesstokenDTO.setRedirect_uri(clientUri);
+        accesstokenDTO.setState(state);
 
-        String accessToken = githubProvider.getAccessToken(accessTokenDTO);
-        GithubUser user = githubProvider.getUser(accessToken);
+        String accesstoken = githubProvider.getAccessToken(accesstokenDTO);
+        GithubUser user = githubProvider.getUser(accesstoken);
         System.out.println(user.getName());
-
-        return "index";
+        return "redirect:/";
+//        if(user != null){
+//            //登录成功，写cookie和session
+//            req.getSession().setAttribute("user", user);
+//            System.out.println(user.getBio());
+//            return "redirect:/";
+//        }else{
+//            //登录失败，重新登录
+//        }
+//        return "index";
     }
 }
