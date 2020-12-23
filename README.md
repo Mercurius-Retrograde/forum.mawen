@@ -36,4 +36,5 @@
      GMT_MODIFIED BIGINT,
      constraint TABLE_NAME_PK
          primary key (ID)
- );`
+ );
+ `
