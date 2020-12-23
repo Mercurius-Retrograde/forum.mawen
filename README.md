@@ -22,6 +22,7 @@
 
 [Mybatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
 
+[工具](https://flywaydb.org/documentation/getstarted/firststeps/maven)
 
 ##脚本
 
@@ -36,5 +37,6 @@
      GMT_MODIFIED BIGINT,
      constraint TABLE_NAME_PK
          primary key (ID)
- );
- `
+ );`
+ 
+`mvn flyway:migration`
