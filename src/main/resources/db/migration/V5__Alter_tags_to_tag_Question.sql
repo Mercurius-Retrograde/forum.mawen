@@ -1,0 +1,1 @@
+alter table QUESTION alter column TAGS rename to TAG;
