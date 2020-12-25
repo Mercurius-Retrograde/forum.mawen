@@ -9,6 +9,8 @@
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/css/bootstrap-theme.css">
 
+    <link rel="stylesheet" href="/css/personal.css">
+
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/js/bootstrap.js"></script>
 </head>
@@ -19,7 +21,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">mawen社区</span>
             </button>
-            <a class="navbar-brand" href="#">mawen社区</a>
+            <a class="navbar-brand" href="/">mawen社区</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,10 +48,42 @@
                         <li><a href="#">个人资料</a></li>
                         <li><a href="#">退出登录</a></li>
                     </ul>
-
             </ul>
         </div>
     </div>
 </nav>
+<div class="container-fluid main" style="background-color: white">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>发现</h2>
+            <hr>
+
+            <div class="media" th:each="question : ${questions}">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object img-rounded" th:src="${question.user.avatarUrl}">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" th:src="${question.title}></h4>
+                    <span th:text="${questino.description}"></span>
+                    <span class="question-status"><span th:text="${question.likeCount}">个点赞</span> ●
+                    <span th:text="${question.commentCount}"></span>次浏览 ●
+                    <span th:text="${question.viewCount}">个回复</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>热门话题</h3>
+            ·话题<br>
+            ·话题<br>
+            ·话题<br>
+            ·话题<br>
+            ·话题<br>
+            ·话题<br>
+        </div>
+    </div>
+</div>
 </body>
 </html>

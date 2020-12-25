@@ -22,7 +22,9 @@
 
 [Mybatis](http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
 
-[工具](https://flywaydb.org/documentation/getstarted/firststeps/maven)
+[flyway](https://flywaydb.org/documentation/getstarted/firststeps/maven)
+
+[Lombok](https://projectlombok.org/setup/maven)
 
 ##脚本
 
