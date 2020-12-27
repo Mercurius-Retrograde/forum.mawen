@@ -91,6 +91,14 @@
             <version>1.18.16</version>
             <scope>provided</scope>
         </dependency>
+        <!--
+        热部署依赖，为保持电脑效率   ：关闭
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        -->
     </dependencies>
 
     <build>

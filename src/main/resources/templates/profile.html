@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>mawen社区</title>
+    <title th:text="${sectionName}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/css/bootstrap.css">
@@ -16,11 +16,10 @@
     <script src="/js/bootstrap.js"></script>
 </head>
 <body>
-<div th:insert="navigation::navigation"></div>
 <div class="container-fluid main" style="background-color: white">
     <div class="row">
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-            <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>发现</h2>
+            <h2><span th:text="${sectionName}"></span>发现</h2>
             <hr>
 
             <div class="media" th:each="question : ${pagination.questions}">
@@ -59,10 +58,10 @@
                         </a>
                     </li>
                     <li th:if="${pagination.showEndPage}">
-                    <a th:href="@{/(page=${pagination.totalPage})}" aria-label="Next">
-                        <span aria-hidden="true">&gt;&gt;</span>
-                    </a>
-                </li>
+                        <a th:href="@{/(page=${pagination.totalPage})}" aria-label="Next">
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
