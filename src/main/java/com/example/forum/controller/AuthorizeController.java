@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,7 +30,7 @@ public class AuthorizeController {
     @Value("${github.client.uri}")//回调url需要与github中设置的回调地址相同，注意http与https的不同
     private String clientUri;
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @GetMapping("/callback")
@@ -47,7 +48,7 @@ public class AuthorizeController {
         String accesstoken = githubProvider.getAccessToken(accesstokenDTO);
         GithubUser githubUser = githubProvider.getUser(accesstoken);
 
-        if(githubUser != null){
+        if(githubUser != null && githubUser.getId() != null){
             User user = new User();
             String token = UUID.randomUUID().toString();
             user.setToken(token);
@@ -55,7 +56,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
-            user.setAvatarUrl(githubUser.getAvatar_url());
+            user.setAvatarUrl(githubUser.getAvatarUrl());
 
             userMapper.insert(user);
             //登录成功，向数据库中插入数据代替写入session
@@ -66,6 +67,6 @@ public class AuthorizeController {
         }else{
             //登录失败，重新登录
         }
-        return "index";
+        return "redirect:/";
     }
 }
