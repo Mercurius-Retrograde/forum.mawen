@@ -2,7 +2,6 @@ package com.example.forum.controller;
 
 
 import com.example.forum.dto.PaginationDTO;
-import com.example.forum.mapper.QuestionMapper;
 import com.example.forum.mapper.UserMapper;
 import com.example.forum.model.User;
 import com.example.forum.service.QuestionService;
@@ -14,19 +13,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 
 @Controller
 public class ProfileController {
 
-    @Autowired
-    private UserMapper userMapper;
+
     @Autowired
     private QuestionService questionService;
-    private Model pagination;
+
+    //private Model pagination;
 
     @GetMapping("/profile/{action}")//设置访问profile时访问下方的地址
     public String profile(@PathVariable(name = "action") String action,//Sring profile返回对应的界面
@@ -34,19 +31,8 @@ public class ProfileController {
                           @RequestParam (name = "size",defaultValue = "6") Integer size,
                           HttpServletRequest request,
                           Model model){
-        User user = null;
-        Cookie[] cookies = request.getCookies();
-        if(cookies != null && cookies.length != 0) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("token")) {
-                    String token = cookie.getValue();
-                    user = userMapper.findByToken(token);
-                    if (user != null)
-                        request.getSession().setAttribute("user", user);
-                    break;
-                }
-            }
-        }
+
+        User user = (User) request.getSession().getAttribute("user");
 
         if(user == null){
             return "redirect:/";

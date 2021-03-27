@@ -25,3 +25,16 @@ body{
 .profile .section{
     margin-top: 24px;
 }
+.community-menu{
+    color:#999;
+    font-size:13px;
+}
+.community-question-hr{
+    margin-bottom: 0px;
+}
+.pageboy-notfound{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 200px;
+    margin-top: 30px;
+}

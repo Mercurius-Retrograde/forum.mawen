@@ -42,3 +42,8 @@
  );`
  
 `mvn flyway:migration`
+
+[Mybatis Generator]
+
+部署命令：`mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate`
+

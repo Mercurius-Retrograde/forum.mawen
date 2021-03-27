@@ -10,7 +10,7 @@ public class PaginationDTO {
 
     private List<QuestionDTO> questions;
     private boolean showPrevious;
-    private boolean showFistPage;
+    private boolean showFirstPage;
     private boolean showNext;
     private boolean showEndPage;
 
@@ -20,21 +20,7 @@ public class PaginationDTO {
 
     public void setPagination(Integer totalCount, Integer page, Integer size) {
 
-        if(totalCount % size == 0){
-            totalPage = totalCount / size;
-        }else{
-            totalPage = totalCount / (size + 1);
-        }
-
-        if (page < 1){
-            page =1;
-        }
-        if (page > totalPage){
-            page = totalPage;
-        }
-
-        this.page = page;
-
+        totalPage = totalCount%size==0?totalCount/size:totalCount/size+1;
         pages.add(page);
 
         for(int i=1;i<4;i++){
@@ -45,31 +31,32 @@ public class PaginationDTO {
                 pages.add(page + i);
             }
         }
-        //是否展示上一页
-        if(page ==1){
-            showPrevious = false;
-        }else {
-            showPrevious = true;
-        }
-        //是否展示下一页
-        if(page == totalPage){
-            showNext = false;
+        if(totalCount % size == 0){
+            totalPage = totalCount / size;
         }else{
-            showNext = true;
+            totalPage = totalCount / (size + 1);
         }
+        if (page < 1){
+            page =1;
+        }
+        if (page > totalPage){
+            page = totalPage;
+        }
+        this.page = page;
 
-        //是否展示第一页
-        if(pages.contains(1)){
-            showFistPage = false;
-        }else{
-            showFistPage = true;
-        }
+        //是否展示上一页
+        showPrevious = page.equals(1)?false:true;
+        //是否展示下一页
+        showNext = page.equals(totalPage)?false:true;
+        //是否展示首页
+        showFirstPage = page>4?true:false;
         //是否展示最后一页
-        if (pages.contains(totalPage)){
-            showEndPage = false;
-        }else{
-            showEndPage = true;
-        }
+        showEndPage = (page.equals(totalPage)||page.equals(totalPage-1))?false:true;
+//        if (pages.contains(totalPage)){
+//            showEndPage = false;
+//        }else{
+//            showEndPage = true;
+//        }
 
     }
 }

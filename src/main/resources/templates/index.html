@@ -26,23 +26,24 @@
             <div class="media" th:each="question : ${pagination.questions}">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object img-rounded" th:src="@{question.user.avatarUrl}">
+                        <img class="media-object img-rounded" th:src="${question.user.avatarUrl}">
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading" th:text="${question.title}"></h4>
-                    <span th:text="${question.description}"></span>
-                    <span class="question-status"><span th:text="${question.likeCount}"></span>个点赞 ●
-                    <span th:text="${question.commentCount}"></span>次浏览 ●
-                    <span th:text="${question.viewCount}"></span>个回复 ● 创建时间
-                        <span th:text="${#dates.format(question.gmtCreate,'YYYY-MM-d H:m')}"></span>
+                    <h4 class="media-heading">
+                    <a th:href="@{'/question/' + ${question.id}}" th:text="${question.title}"></a></h4>
+                        <span th:text="${question.description}"></span>
+                        <span class="question-status"><span th:text="${question.likeCount}"></span>个点赞 ●
+                        <span th:text="${question.commentCount}"></span>次浏览 ●
+                        <span th:text="${question.viewCount}"></span>个回复 ● 创建时间
+                            <span th:text="${#dates.format(question.gmtCreate,'YYYY-MM-dd H:m')}"></span>
                 </div>
             </div>
 
             <!--页面下方翻页功能模块-->
             <nav aria-label="Page navigation">
                 <ul class="pagination">
-                    <li th:if="${pagination.showFistPage}">
+                    <li th:if="${pagination.isShowFirstPage()}">
                         <a href="/?page=1" aria-label="Previous">
                             <span aria-hidden="true">&lt;&lt;</span>
                         </a>
@@ -60,7 +61,7 @@
                             <span aria-hidden="true">&gt;</span>
                         </a>
                     </li>
-                    <li th:if="${pagination.showEndPage}">
+                    <li th:if="${pagination.isShowEndPage()}">
                     <a th:href="@{/(page=${pagination.totalPage})}" aria-label="Next">
                         <span aria-hidden="true">&gt;&gt;</span>
                     </a>
@@ -69,13 +70,15 @@
             </nav>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <h3>热门话题</h3>
-            ·话题<br>
-            ·话题<br>
-            ·话题<br>
-            ·话题<br>
-            ·话题<br>
-            ·话题<br>
+            <h3>Git备注，防止忘记</h3>
+            ·<br>
+            ·git init---将该文件夹变成git可管理的仓库<br>
+            ·git add .---将所有文件添加进暂存区<br>
+            ·git commit -m ‘’---将文件提交到仓库，-m添加备注信息<br>
+            ·git checkout 分支名---切换到该分支<br>
+            ·git pull --rebase origin 分支名---获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<br>
+            ·git push -u origin 分支名---把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支qunar_yuzhan_star推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<br>
+            ·git push origin --delete 分支名---删除远程分支
         </div>
     </div>
 </div>
