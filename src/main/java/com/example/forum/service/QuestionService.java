@@ -4,6 +4,7 @@ import com.example.forum.dto.PaginationDTO;
 import com.example.forum.dto.QuestionDTO;
 import com.example.forum.exception.CustomizeErrorCode;
 import com.example.forum.exception.CustomizeException;
+import com.example.forum.mapper.QuestionExtMapper;
 import com.example.forum.mapper.QuestionMapper;
 import com.example.forum.mapper.UserMapper;
 import com.example.forum.model.Question;
@@ -27,6 +28,8 @@ public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
 
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     public PaginationDTO list(Integer page, Integer size) {
 
@@ -141,5 +144,19 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+//        Question question = questionMapper.selectByPrimaryKey(id);
+//        Question updataQuestion = new Question();
+//        updataQuestion.setViewCount(question.getViewCount() + 1);
+//        QuestionExample example = new QuestionExample();
+//        example.createCriteria()
+//                .andIdEqualTo(id);
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
+//        questionMapper.updateByExampleSelective(updataQuestion, example);
     }
 }
