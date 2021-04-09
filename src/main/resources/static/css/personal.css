@@ -17,6 +17,9 @@ body{
     width: 38px;
     height: 38px;
 }
+/*.media-body{*/
+/*    padding-top: 10px;*/
+/*}*/
 .question-status{
     font-size: 12px;
     font-weight: normal;
@@ -28,6 +31,7 @@ body{
 .community-menu{
     color:#999;
     font-size:13px;
+    margin-bottom: 5px;
 }
 .community-question-hr{
     margin-bottom: 0px;
@@ -37,4 +41,50 @@ body{
     padding-left: 15px;
     margin-left: 200px;
     margin-top: 30px;
+}
+.comment{
+    margin: 10px 0px;
+}
+.comments{
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.btn-comment{
+    float: right;
+    margin-bottom: 10px;
+}
+.comment-sp{
+    margin-top: 13px;
+}
+.menu{
+    color: #999999;
+}
+.menu .ico{
+    margin-right: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.menu .ico:hover{
+    color: #499ef3;
+}
+.question-name{
+    font-weight: bold;
+}
+.content-detail{
+    margin:7px 0 7px;
+}
+.content-frame{
+    margin-top: 10px;
+}
+.content-date{
+    float: right;
+}
+.page-font-style{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.collapse in{
+
 }

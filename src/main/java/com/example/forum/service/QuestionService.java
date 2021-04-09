@@ -14,6 +14,7 @@ import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.ArrayList;
@@ -31,6 +32,8 @@ public class QuestionService {
     @Autowired
     private QuestionExtMapper questionExtMapper;
 
+    @Transactional
+    //将方法体加到事务中，防止上一条执行成功，下一条执行失败后仍然插入数据库。
     public PaginationDTO list(Integer page, Integer size) {
 
         PaginationDTO paginationDTO = new PaginationDTO();
@@ -63,7 +66,7 @@ public class QuestionService {
     }
 
 
-    public PaginationDTO listByUser(Integer userId, Integer page, Integer size) {
+    public PaginationDTO listByUser(Long userId, Integer page, Integer size) {
         {
 
             PaginationDTO paginationDTO = new PaginationDTO();
@@ -106,7 +109,7 @@ public class QuestionService {
         }
     }
 
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
 
         if(question == null){
@@ -123,6 +126,9 @@ public class QuestionService {
         if(question.getId() ==null){
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtModified());
+            question.setLikeCount(0);
+            question.setViewCount(0);
+            question.setCommentCount(0);
             questionMapper.insert(question);
         }else {
 //            question.setTitle(question.getTitle());
@@ -146,7 +152,7 @@ public class QuestionService {
         }
     }
 
-    public void incView(Integer id) {
+    public void incView(Long id) {
 //        Question question = questionMapper.selectByPrimaryKey(id);
 //        Question updataQuestion = new Question();
 //        updataQuestion.setViewCount(question.getViewCount() + 1);

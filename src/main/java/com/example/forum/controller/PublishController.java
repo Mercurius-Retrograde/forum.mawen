@@ -25,7 +25,7 @@ public class PublishController {
     private QuestionService questionService;
 
     @GetMapping("/publish/{id}")
-    public String editQuestion(@PathVariable("id") Integer id,//pathvariable中加入name后无法获取url参数
+    public String editQuestion(@PathVariable("id") Long id,//pathvariable中加入name后无法获取url参数
                                Model model){
         QuestionDTO question = questionService.getById(id);
         model.addAttribute("title",question.getTitle());
@@ -43,7 +43,7 @@ public class PublishController {
             @RequestParam(value = "title",required = false) String title,
             @RequestParam(value = "description",required = false) String description,
             @RequestParam(value = "tag",required = false) String tag,
-            @RequestParam(value = "id",required = false) Integer id,
+            @RequestParam(value = "id",required = false) Long id,
             HttpServletRequest request,
             Model model){
 

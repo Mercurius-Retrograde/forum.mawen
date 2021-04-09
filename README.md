@@ -41,7 +41,7 @@
          primary key (ID)
  );`
  
-`mvn flyway:migration`
+`mvn flyway:migrate`
 
 [Mybatis Generator]
 

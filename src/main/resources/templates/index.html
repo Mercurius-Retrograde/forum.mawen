@@ -14,7 +14,17 @@
     <script src="/js/jquery-3.5.1.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/js/bootstrap.js"></script>
+
 </head>
+    <script type="application/javascript">
+        window.onload=function () {
+            var closable = window.localStorage.getItem("closable");
+            if (closable == "true") {
+                window.close();
+                window.localStorage.removeItem("closable");
+            }
+        }
+    </script>
 <body>
 <div th:insert="navigation::navigation"></div>
 <div class="container-fluid main" style="background-color: white">
@@ -34,8 +44,8 @@
                     <a th:href="@{'/question/' + ${question.id}}" th:text="${question.title}"></a></h4>
                         <span th:text="${question.description}"></span>
                         <span class="question-status"><span th:text="${question.likeCount}"></span>个点赞 ●
-                        <span th:text="${question.commentCount}"></span>次浏览 ●
-                        <span th:text="${question.viewCount}"></span>个回复 ● 创建时间
+                        <span th:text="${question.commentCount}"></span>个回复 ●
+                        <span th:text="${question.viewCount}"></span>次浏览 ● 创建时间
                             <span th:text="${#dates.format(question.gmtCreate,'YYYY-MM-dd H:m')}"></span>
                 </div>
             </div>
