@@ -1,8 +1,9 @@
 package com.example.forum.controller;
 
-import com.example.forum.dto.CommentCreateDTO;
 import com.example.forum.dto.CommentDTO;
 import com.example.forum.dto.QuestionDTO;
+import com.example.forum.enums.CommentTypeEnum;
+import com.example.forum.model.Question;
 import com.example.forum.service.CommentService;
 import com.example.forum.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +26,13 @@ public class QuestionController {
     @GetMapping("/question/{id}")
     public String question(@PathVariable("id") Long id, Model model){
         QuestionDTO questionDTO = questionService.getById(id);
-        List<CommentDTO> comments = commentService.listByQuestionId(id);
+        List<QuestionDTO> relatedQuestions = questionService.selectRelated(questionDTO);
+        List<CommentDTO> comments = commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
         //累加阅读数
         questionService.incView(id);
         model.addAttribute("question",questionDTO);
         model.addAttribute("comments",comments);
+        model.addAttribute("relatedQuestions",relatedQuestions);
         return "question";
     }
 }

@@ -4,12 +4,8 @@ import com.example.forum.dto.CommentDTO;
 import com.example.forum.enums.CommentTypeEnum;
 import com.example.forum.exception.CustomizeErrorCode;
 import com.example.forum.exception.CustomizeException;
-import com.example.forum.mapper.CommentMapper;
-import com.example.forum.mapper.QuestionExtMapper;
-import com.example.forum.mapper.QuestionMapper;
-import com.example.forum.mapper.UserMapper;
+import com.example.forum.mapper.*;
 import com.example.forum.model.*;
-import org.omg.PortableInterceptor.USER_EXCEPTION;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +24,8 @@ public class CommentService {
     private QuestionExtMapper questionExtMapper;
     @Autowired
     private UserMapper userMapper;
-
+    @Autowired
+    private CommentExtMapper commentExtMapper;
     public void insert(Comment comment) {
         if(comment.getParentId() == null || comment.getParentId() ==0){
             //没有传问题ID
@@ -46,6 +43,11 @@ public class CommentService {
                 throw new CustomizeException(CustomizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
+            //增加评论数
+            Comment parentComment = new Comment();
+            parentComment.setId(comment.getParentId());
+            parentComment.setCommentCount(1);
+            commentExtMapper.incCommentCount(parentComment);
         }else {
             //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
@@ -59,11 +61,11 @@ public class CommentService {
         }
     }
 
-    public List<CommentDTO> listByQuestionId(Long id) {
+    public List<CommentDTO> listByTargetId(Long id, CommentTypeEnum type) {
         CommentExample commentExample = new CommentExample();
         commentExample.createCriteria()
                 .andParentIdEqualTo(id)
-                .andTypeEqualTo(CommentTypeEnum.QUESTION.getType());
+                .andTypeEqualTo(type.getType());
         List<Comment> comments = commentMapper.selectByExample(commentExample);
         if(comments.size() == 0){
             return  new ArrayList<>();
