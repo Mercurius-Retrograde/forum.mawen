@@ -1,11 +1,13 @@
 package com.example.forum.controller;
 
+import com.example.forum.cache.TagCache;
 import com.example.forum.dto.QuestionDTO;
 import com.example.forum.mapper.QuestionMapper;
 import com.example.forum.mapper.UserMapper;
 import com.example.forum.model.Question;
 import com.example.forum.model.User;
 import com.example.forum.service.QuestionService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +26,7 @@ public class PublishController {
     @Autowired
     private QuestionService questionService;
 
+    //修改问题
     @GetMapping("/publish/{id}")
     public String editQuestion(@PathVariable("id") Long id,//pathvariable中加入name后无法获取url参数
                                Model model){
@@ -31,13 +34,16 @@ public class PublishController {
         model.addAttribute("title",question.getTitle());
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
+    //提交问题
     @GetMapping("/publish")
-    public String publish(){
+    public String publish(Model model){
+        model.addAttribute("tags", TagCache.get());
         return "publish";
     }
-
+    //返回错误信息
     @PostMapping("/publish")
     public String doPublish(
             @RequestParam(value = "title",required = false) String title,
@@ -50,6 +56,7 @@ public class PublishController {
         model.addAttribute("title",title);
         model.addAttribute("description",description);
         model.addAttribute("tag",tag);//将填写的详细信息回显到界面
+        model.addAttribute("tags", TagCache.get());
 
         if(title ==null||title == ""){
             model.addAttribute("error","标题不能为空");
@@ -61,6 +68,11 @@ public class PublishController {
         }
         if(tag ==null||tag == ""){
             model.addAttribute("error","标签不能为空");
+            return "publish";
+        }
+        String invalid = TagCache.filterInvalid(tag);
+        if(StringUtils.isNotBlank(invalid)){
+            model.addAttribute("error","非法标签："+invalid);
             return "publish";
         }
 

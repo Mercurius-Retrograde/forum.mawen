@@ -1,9 +1,9 @@
 package com.example.forum.controller;
 
+import com.example.forum.cache.TagCache;
 import com.example.forum.dto.CommentDTO;
 import com.example.forum.dto.QuestionDTO;
 import com.example.forum.enums.CommentTypeEnum;
-import com.example.forum.model.Question;
 import com.example.forum.service.CommentService;
 import com.example.forum.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
