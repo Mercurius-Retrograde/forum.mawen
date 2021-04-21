@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title th:text="${sectionName}"></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/css/bootstrap.css">
 
@@ -19,13 +19,15 @@
 <div th:insert="~{navigation :: navigation}"></div>
 <div class="container-fluid main profile" style="background-color: white">
     <div class="row">
+
         <!--页面左侧-->
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <h2><span th:text="${sectionName}"></span></h2>
             <hr>
             <!--点击我的提问-显示问题列表-->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section == 'question'}">
-                <div class="media" th:each="question : ${pagination.questions}">
+
+                <div class="media" th:each="question : ${pagination.data}">
                     <div class="media-left">
                         <a href="#">
                             <img class="media-object img-rounded" th:src="${question.user.avatarUrl}">
@@ -46,7 +48,26 @@
                         </span>
                     </div>
                 </div>
-                <!--页面下方翻页功能模块-->
+
+
+
+            </div>
+            <!--点击最新通知-显示通知列表-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section == 'replies'}">
+                <div class="media" th:each="notification : ${pagination.data}">
+                    <div class="media-body">
+                        <p class="media-heading">
+                            <span th:text="${notification.notifierName+' '+notification.typeName+' '}"></span>
+                            <a th:href="@{'/notification/' + ${notification.id}}"
+                               th:text="${notification.outerTitle}"></a>
+                            <span class="label label-danger" th:if="${notification.status == 0}">未读</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!--页面下方翻页功能模块-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
                         <li th:if="${pagination.isShowFirstPage}">
@@ -75,21 +96,19 @@
                     </ul>
                 </nav>
             </div>
-            <!--点击最新通知-显示通知列表-->
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section == 'replies'}">
-
-            </div>
         </div>
         <!--页面右侧-->
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <div class="list-group section">
                 <!--将原来单独的class=‘list-group-item’放到active后来解决样式错误问题-->
 
-                <a href="/profile/question" th:class="${section == 'question'}? 'active list-group-item':'list-group-item'">我的提问
-                    <span class="badge">10</span></a>
-                <a href="/profile/replies" th:class="${section == 'replies'}? 'active list-group-item':'list-group-item'">
+                <a href="/profile/question"
+                   th:class="${section == 'question'}? 'active list-group-item':'list-group-item'">我的提问
+                    <span class="badge"></span></a>
+                <a href="/profile/replies"
+                   th:class="${section == 'replies'}? 'active list-group-item':'list-group-item'">
                     最新回复
-                    <span class="badge" th:text="${unreadCount}"/> </a>
+                    <span class="badge" th:text="${session.unreadCount}"/> </a>
             </div>
         </div>
     </div>

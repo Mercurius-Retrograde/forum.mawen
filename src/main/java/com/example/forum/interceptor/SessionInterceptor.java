@@ -1,8 +1,10 @@
 package com.example.forum.interceptor;
 
 import com.example.forum.mapper.UserMapper;
+import com.example.forum.model.Notification;
 import com.example.forum.model.User;
 import com.example.forum.model.UserExample;
+import com.example.forum.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -17,6 +19,8 @@ import java.util.List;
 @Service
 public class SessionInterceptor implements HandlerInterceptor {
 
+    @Autowired
+    private NotificationService notificationService;
     @Autowired
     private UserMapper userMapper;//userMapper没有注入
 
@@ -34,6 +38,9 @@ public class SessionInterceptor implements HandlerInterceptor {
                     //User user= userMapper.findByToken(token);//空指针异常
                     if (users.size() != 0)
                         request.getSession().setAttribute("user", users.get(0));
+                        Long unreadCount = notificationService.unreadCount(users.get(0).getId());
+
+                    request.getSession().setAttribute("unreadCount",unreadCount);
                     break;
                 }
             }
