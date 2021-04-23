@@ -66,7 +66,8 @@ public class CommentService {
                 //回复的问题不存在
                 throw new CustomizeException((CustomizeErrorCode.QUESTION_NOT_FOUND));
             }
-            commentMapper.insert(comment);
+//            comment.setCommentCount(0);或者将insert改成insertselective
+            commentMapper.insertSelective(comment);
             question.setCommentCount(1);
             questionExtMapper.incCommentCount(question);
             //创建通知
@@ -78,6 +79,9 @@ public class CommentService {
 
     //封装通知方法
     private void createNotify(Comment comment, Long receiver, String notifierName, String outerTitle, NotificationTypeEnum notificationType, Long outerId) {
+        if(receiver == comment.getCommentator()){
+            return;
+        }
         Notification notification = new Notification();
         notification.setGmtCreate(System.currentTimeMillis());
         notification.setType(notificationType.getType());

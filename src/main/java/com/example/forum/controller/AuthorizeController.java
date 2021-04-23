@@ -5,6 +5,7 @@ import com.example.forum.dto.GithubUser;
 import com.example.forum.model.User;
 import com.example.forum.provider.GithubProvider;
 import com.example.forum.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
+@Slf4j
 @Controller
 public class AuthorizeController {
 
@@ -63,6 +65,7 @@ public class AuthorizeController {
             //将token存入cookie
             return "redirect:/";
         } else {
+            log.error("登良路");
             //登录失败，重新登录
         }
         return "redirect:/";

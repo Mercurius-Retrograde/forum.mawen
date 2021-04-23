@@ -28,6 +28,7 @@ public class NotificationService {
     public PaginationDTO list(Long userId, Integer page, Integer size) {
 
         PaginationDTO<NotificationDTO> paginationDTO = new PaginationDTO<>();
+        Integer totalPage;
 
         NotificationExample notificationExample = new NotificationExample();
         notificationExample.createCriteria()
@@ -35,14 +36,19 @@ public class NotificationService {
         Integer totalCount = (int) notificationMapper.countByExample(notificationExample);
 
 
-//            Integer totalCount  = questionMapper.countByUserId(userId);
-        paginationDTO.setPagination(totalCount, page, size);
+//        Integer totalCount  = questionMapper.countByUserId(userId);
+//        paginationDTO.setPagination(totalPage, page);
+        if (totalCount % size == 0) {
+            totalPage = totalCount / size;
+        } else {
+            totalPage = totalCount / size + 1;
+        }
 
         if (page < 1) {
             page = 1;
         }
-        if (page > paginationDTO.getTotalPage()) {
-            page = paginationDTO.getTotalPage();
+        if (page > totalPage) {
+            page = totalPage;
         }
         //size*(page - 1)
         Integer offset = size * (page - 1);

@@ -39,16 +39,16 @@ public class ProfileController {
         if(user == null){
             return "redirect:/";
         }
-        questionService.listByUser(user.getId(),page,size);
+//        questionService.listByUser(user.getId(),page,size);
 
-        if("question".contains(action)){
+        if("question".equals(action)){
             model.addAttribute("section","question");
             model.addAttribute("sectionName","我的提问");
 
             //查询已登录用户提交问题列表，调用分页模块
             PaginationDTO paginationDTO = questionService.listByUser(user.getId(),page,size);
             model.addAttribute("pagination", paginationDTO);
-        }else if("replies".contains(action)){
+        }else if("replies".equals(action)){
             PaginationDTO paginationDTO = notificationService.list(user.getId(),page,size);
 //            Long unreadCount = notificationService.unreadCount(user.getId());
             model.addAttribute("section","replies");
@@ -56,6 +56,6 @@ public class ProfileController {
 //            model.addAttribute("unreadCount",unreadCount);
             model.addAttribute("sectionName","最新回复");
         }
-        return "profile";
+            return "profile";
     }
 }

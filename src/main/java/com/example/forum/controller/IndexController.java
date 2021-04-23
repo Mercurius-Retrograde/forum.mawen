@@ -1,6 +1,7 @@
 package com.example.forum.controller;
 
 import com.example.forum.dto.PaginationDTO;
+import com.example.forum.dto.QuestionQueryDTO;
 import com.example.forum.mapper.UserMapper;
 import com.example.forum.model.User;
 import com.example.forum.service.QuestionService;
@@ -24,10 +25,12 @@ public class IndexController {
     @GetMapping("/")
     public String index(Model model,
                         @RequestParam (name = "page",defaultValue = "1") Integer page,
-                        @RequestParam (name = "size",defaultValue = "6") Integer size){
+                        @RequestParam (name = "size",defaultValue = "6") Integer size,
+                        @RequestParam (name = "search",required = false) String search){
 
-        PaginationDTO pagination = questionService.list(page,size);
+        PaginationDTO pagination = questionService.list(search,page,size);
         model.addAttribute("pagination",pagination);
+        model.addAttribute("search",search);
         return "index";
     }
 }

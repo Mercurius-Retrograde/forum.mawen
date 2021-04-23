@@ -21,16 +21,20 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <form class="navbar-form navbar-left">
+                    <form class="navbar-form navbar-left" action="/" method="get">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="搜索问题、话题或用户">
+                            <input type="text" class="form-control" placeholder="搜索问题、话题或用户" name="search">
                         </div>
                         <button type="submit" class="btn btn-default">搜索</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown" th:if="${session.user != null}">
-                            <a href="/publish">发布</a></li>
-                        <li><a href="/profile/replies">通知<span class="badge" th:text="${' '+session.unreadCount}"/></a></li>
+                            <a href="/publish">发布</a>
+                        </li>
+                        <li><a href="/profile/replies">通知<span class="badge"
+                                                               th:if="${session.user != null || session.unreadCount != 0}"
+                                                               th:text="${' '+session.unreadCount}"/></a>
+                        </li>
                         <li th:if="${session.user == null}">
                             <a href="https://github.com/login/oauth/authorize?client_id=bccffdfe93d559a50885&redirect_uri=http://localhost:8887/callback&scope=user&state=1"/>登录</li>
                         </li>

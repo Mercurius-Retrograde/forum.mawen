@@ -12,6 +12,10 @@
 
 [Bootstrap](https://v3.bootcss.com/getting-started/)
 
+[Markdown 下载](https://pandao.github.io/editor.md)
+
+[Markdown Github](https://github.com/pandao/editor.md)
+
 ##工具
 
 [Git](https：//git-scm.com/download)
@@ -47,3 +51,8 @@
 
 部署命令：`mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate`
 
+[部署步骤]
+
+- 更新主机镜像信息:yum update
+- 安装git:yum install git
+- 创建文件夹: mkdir App
