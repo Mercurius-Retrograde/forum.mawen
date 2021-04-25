@@ -55,4 +55,11 @@
 
 - 更新主机镜像信息:yum update
 - 安装git:yum install git
+- 安装maven:yum install maven
 - 创建文件夹: mkdir App
+- 进入该文件夹: cd App
+- 克隆项目: git clone https://github.com/smallyang96/forum.mawen.git
+- 进入项目文件夹:cd forum.mawen
+- 打包: mvn complie paskage
+- 创建新的配置文件application-production.properties: cp /src/main/resources/application.properties /src/main/resources/application-production.properties
+- 修改新的服务器配置文件: vim /src/main/resources/application-production.properties,替换localhost为服务器ip

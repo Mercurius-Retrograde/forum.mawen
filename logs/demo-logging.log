@@ -1,19 +1,600 @@
-2021-04-23 16:08:35.212  INFO 8508 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 8508 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
-2021-04-23 16:08:35.212  INFO 8508 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
-2021-04-23 16:08:35.790  INFO 8508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2021-04-23 16:08:35.791  INFO 8508 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-23 16:08:35.792  INFO 8508 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-23 16:08:35.837  INFO 8508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-23 16:08:35.838  INFO 8508 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 617 ms
-2021-04-23 16:08:35.876  INFO 8508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2021-04-23 16:08:35.893  INFO 8508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2021-04-23 16:08:35.893  INFO 8508 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
-2021-04-23 16:08:36.273  INFO 8508 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-23 16:08:36.306  INFO 8508 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-04-23 16:08:36.411  INFO 8508 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-23 16:08:36.436  INFO 8508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2021-04-23 16:08:36.445  INFO 8508 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 1.309 seconds (JVM running for 298.315)
-2021-04-23 16:08:36.450  INFO 8508 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-04-23 16:10:09.174  INFO 8508 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-23 16:10:09.177  INFO 8508 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2021-04-23 16:10:09.228  INFO 8508 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-04-25 16:07:43.822  INFO 12888 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 12888 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-25 16:07:43.831  INFO 12888 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-25 16:07:44.044  INFO 12888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-25 16:07:44.045  INFO 12888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-25 16:07:44.092  WARN 12888 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-25 16:07:46.604  INFO 12888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-25 16:07:46.621  INFO 12888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 16:07:46.622  INFO 12888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-25 16:07:46.741  INFO 12888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 16:07:46.741  INFO 12888 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2694 ms
+2021-04-25 16:07:46.810  INFO 12888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-25 16:07:47.053  INFO 12888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-25 16:07:47.061  INFO 12888 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-25 16:07:48.156  INFO 12888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 16:07:48.280  INFO 12888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-25 16:07:48.608  INFO 12888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-25 16:07:48.689  INFO 12888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-25 16:07:48.712  INFO 12888 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 5.953 seconds (JVM running for 8.935)
+2021-04-25 16:07:57.701  INFO 12888 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 16:07:57.702  INFO 12888 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 16:07:57.703  INFO 12888 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-25 16:07:57.848 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:07:57.872 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:07:57.892 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:07:57.894 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:07:57.898 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:07:57.910 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:07:57.911 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:07:57.914 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:07:57.915 DEBUG 12888 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:08:01.171 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:08:01.171 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:08:01.172 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:08:01.172 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:08:01.173 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:08:01.176 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:08:01.176 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:08:01.176 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:08:01.177 DEBUG 12888 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:16.014  INFO 10680 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 10680 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-25 16:10:16.018  INFO 10680 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-25 16:10:16.165  INFO 10680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-25 16:10:16.166  INFO 10680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-25 16:10:16.243  WARN 10680 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-25 16:10:18.029  INFO 10680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-25 16:10:18.040  INFO 10680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 16:10:18.041  INFO 10680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-25 16:10:18.132  INFO 10680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 16:10:18.135  INFO 10680 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1967 ms
+2021-04-25 16:10:18.206  INFO 10680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-25 16:10:18.457  INFO 10680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-25 16:10:18.521  INFO 10680 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-25 16:10:19.542  INFO 10680 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 16:10:19.661  INFO 10680 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-25 16:10:19.965  INFO 10680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-25 16:10:20.030  INFO 10680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-25 16:10:20.047  INFO 10680 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 5.159 seconds (JVM running for 7.055)
+2021-04-25 16:10:28.308  INFO 10680 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 16:10:28.308  INFO 10680 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 16:10:28.310  INFO 10680 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-25 16:10:28.432 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:28.455 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:28.472 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:28.476 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:28.480 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:28.488 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:28.489 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:28.492 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:28.493 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:29.961 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:29.962 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:29.963 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:29.963 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:29.963 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:29.967 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:29.968 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:29.969 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:29.970 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:30.618 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:30.618 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:30.619 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:30.619 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:30.620 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:30.625 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:30.626 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:30.626 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:30.627 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:30.830 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:30.831 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:30.831 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:30.832 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:30.832 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:30.839 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:30.840 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:30.841 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:30.842 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:31.165 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:31.165 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:31.166 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:31.166 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:31.167 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:31.169 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:31.170 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:31.170 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:31.173 DEBUG 10680 --- [http-nio-8887-exec-5] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:31.459 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:31.460 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:31.462 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:31.463 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:31.464 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:31.466 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:31.466 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:31.467 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:31.468 DEBUG 10680 --- [http-nio-8887-exec-2] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:31.682 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:31.682 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:31.683 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:31.683 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:31.684 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:31.686 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:31.686 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:31.687 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:31.689 DEBUG 10680 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:10:32.716 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:10:32.717 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:10:32.717 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:10:32.718 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:10:32.720 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:10:32.722 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:10:32.723 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:10:32.723 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:10:32.723 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:24:11.854 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:24:11.855 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:24:11.855 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:24:11.855 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:24:11.856 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:24:11.858 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:24:11.858 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:24:11.859 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:24:11.859 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:24:13.181 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:24:13.181 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:24:13.181 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:24:13.181 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:24:13.182 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:24:13.197 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:24:13.198 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:24:13.198 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:24:13.198 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:24:14.075 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:24:14.076 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:24:14.076 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:24:14.077 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:24:14.077 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:24:14.079 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:24:14.080 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:24:14.080 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:24:14.081 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:24:14.924 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:24:14.925 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:24:14.926 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:24:14.926 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:24:14.927 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:24:14.929 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:24:14.929 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:24:14.930 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:24:14.931 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:24:15.781 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:24:15.782 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:24:15.783 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:24:15.784 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:24:15.784 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:24:15.787 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:24:15.788 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:24:15.788 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:24:15.788 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:24:16.677 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:24:16.677 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:24:16.678 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:24:16.678 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:24:16.678 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:24:16.679 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:24:16.680 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:24:16.680 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:24:16.682 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:26:00.755 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:26:00.755 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:26:00.755 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:26:00.756 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:26:00.756 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:26:00.757 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:26:00.758 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:26:00.758 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:26:00.758 DEBUG 10680 --- [http-nio-8887-exec-7] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:26:03.919 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:26:03.919 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:26:03.919 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:26:03.920 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:26:03.920 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:26:03.922 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:26:03.922 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:26:03.923 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:26:03.925 DEBUG 10680 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:26:05.153 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:26:05.153 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:26:05.154 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:26:05.154 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:26:05.154 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:26:05.155 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:26:05.156 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:26:05.156 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:26:05.156 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:26:06.469 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:26:06.469 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:26:06.470 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:26:06.470 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:26:06.471 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:26:06.472 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:26:06.473 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:26:06.473 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:26:06.474 DEBUG 10680 --- [http-nio-8887-exec-3] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:26:07.486 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:26:07.486 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:26:07.487 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:26:07.487 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:26:07.487 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:26:07.488 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:26:07.490 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:26:07.490 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:26:07.491 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:29:00.053 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:29:00.055 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:29:00.056 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:29:00.056 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:29:00.056 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:29:00.058 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:29:00.059 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:29:00.059 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:29:00.060 DEBUG 10680 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:29:00.943 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:29:00.943 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:29:00.943 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:29:00.943 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:29:00.944 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:29:00.945 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:29:00.945 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:29:00.945 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:29:00.946 DEBUG 10680 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:29:01.675 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:29:01.675 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:29:01.676 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:29:01.676 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:29:01.676 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:29:01.677 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:29:01.678 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:29:01.678 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:29:01.678 DEBUG 10680 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:29:03.135 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:29:03.135 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:29:03.135 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:29:03.136 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:29:03.136 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:29:03.137 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:29:03.138 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:29:03.138 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:29:03.138 DEBUG 10680 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:30:18.722  INFO 19428 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 19428 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-25 16:30:18.764  INFO 19428 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-25 16:30:18.871  INFO 19428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-25 16:30:18.872  INFO 19428 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-25 16:30:18.923  WARN 19428 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-25 16:30:20.882  INFO 19428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-25 16:30:20.896  INFO 19428 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 16:30:20.896  INFO 19428 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-25 16:30:20.996  INFO 19428 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 16:30:20.996  INFO 19428 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2123 ms
+2021-04-25 16:30:21.063  INFO 19428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-25 16:30:21.252  INFO 19428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-25 16:30:21.261  INFO 19428 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-25 16:30:22.247  INFO 19428 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 16:30:22.396  INFO 19428 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-25 16:30:22.735  INFO 19428 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-25 16:30:22.796  INFO 19428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-25 16:30:22.812  INFO 19428 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 5.532 seconds (JVM running for 8.055)
+2021-04-25 16:31:28.664  INFO 19428 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 16:31:28.664  INFO 19428 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 16:31:28.665  INFO 19428 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-25 16:31:28.776 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:31:28.802 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:31:28.824 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:31:28.828 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:31:28.834 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:31:28.844 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:31:28.845 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:31:28.848 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:31:28.850 DEBUG 19428 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:31:31.113 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:31:31.113 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:31:31.114 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:31:31.115 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:31:31.115 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:31:31.118 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:31:31.119 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:31:31.119 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:31:31.120 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:17.457 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:17.457 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:17.458 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:17.459 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:17.459 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:17.470 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:17.471 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:17.472 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:17.472 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:19.030 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:19.030 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:19.031 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:19.032 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:19.033 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:19.036 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:19.036 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:19.037 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:19.037 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:20.050 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:20.051 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:20.052 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:20.052 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:20.053 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:20.055 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:20.056 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:20.057 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:20.059 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:21.117 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:21.118 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:21.119 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:21.120 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:21.121 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:21.122 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:21.123 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:21.124 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:21.127 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:35.577 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:35.577 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:35.578 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:35.579 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:35.579 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:35.582 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:35.582 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:35.583 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:35.583 DEBUG 19428 --- [http-nio-8887-exec-2] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:36.540 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:36.541 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:36.541 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:36.543 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:36.546 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:36.550 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:36.550 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:36.551 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:36.551 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:37.327 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:37.328 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:37.329 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:37.329 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:37.329 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:37.332 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:37.332 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:37.332 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:37.333 DEBUG 19428 --- [http-nio-8887-exec-10] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:37.773 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:37.773 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:37.773 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:37.774 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:37.775 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:37.790 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:37.791 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:37.792 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:37.793 DEBUG 19428 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:38.405 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:38.405 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:38.406 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:38.406 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:38.406 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:38.410 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:38.410 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:38.411 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:38.411 DEBUG 19428 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:38.634 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:38.634 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:38.634 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:38.635 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:38.636 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:38.638 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:38.641 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:38.643 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:38.644 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:38.986 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:38.986 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:38.987 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:38.988 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:38.989 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:38.994 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:38.995 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:38.995 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:38.995 DEBUG 19428 --- [http-nio-8887-exec-9] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:32:39.418 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:32:39.419 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:32:39.419 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:32:39.419 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:32:39.420 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:32:39.424 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:32:39.424 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:32:39.424 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:32:39.425 DEBUG 19428 --- [http-nio-8887-exec-6] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:33:09.455  INFO 18896 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 18896 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-25 16:33:09.463  INFO 18896 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-25 16:33:09.617  INFO 18896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-25 16:33:09.617  INFO 18896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-25 16:33:09.624  WARN 18896 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-25 16:33:11.229  INFO 18896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-25 16:33:11.239  INFO 18896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 16:33:11.240  INFO 18896 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-25 16:33:11.329  INFO 18896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 16:33:11.330  INFO 18896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1711 ms
+2021-04-25 16:33:11.396  INFO 18896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-25 16:33:11.630  INFO 18896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-25 16:33:11.637  INFO 18896 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-25 16:33:12.509  INFO 18896 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 16:33:12.602  INFO 18896 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-25 16:33:12.861  INFO 18896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-25 16:33:12.910  INFO 18896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-25 16:33:12.923  INFO 18896 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 4.379 seconds (JVM running for 6.217)
+2021-04-25 16:33:23.750  INFO 18896 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 16:33:23.751  INFO 18896 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 16:33:23.752  INFO 18896 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-25 16:33:23.864 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:33:23.884 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:33:23.903 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:33:23.904 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:33:23.907 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:33:23.916 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:33:23.917 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:33:23.919 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:33:23.920 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:33:27.370 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:33:27.371 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:33:27.371 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:33:27.372 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:33:27.372 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:33:27.375 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:33:27.375 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:33:27.376 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:33:27.377 DEBUG 18896 --- [http-nio-8887-exec-4] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:03.960 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:03.960 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:03.961 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:03.961 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:03.962 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:03.967 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:03.968 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:03.968 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:03.968 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:05.095 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:05.095 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:05.096 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:05.096 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:05.096 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:05.098 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:05.099 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:05.099 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:05.100 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:06.116 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:06.116 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:06.117 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:06.117 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:06.118 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:06.122 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:06.124 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:06.125 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:06.126 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:07.128 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:07.129 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:07.130 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:07.132 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:07.132 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:07.134 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:07.135 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:07.135 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:07.135 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:08.152 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:08.153 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:08.154 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:08.154 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:08.155 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:08.156 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:08.156 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:08.157 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:08.157 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:09.076 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:09.077 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:09.077 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:09.078 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:09.079 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:09.082 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:09.083 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:09.083 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:09.084 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:09.970 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:09.970 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:09.970 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:09.971 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:09.972 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:09.973 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:09.973 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:09.974 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:09.974 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:10.992 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:10.993 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:10.993 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:10.994 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:10.994 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:11.007 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:11.008 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:11.008 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:11.009 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:11.989 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:11.989 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:11.990 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:11.990 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:11.990 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:11.992 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:11.992 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:11.992 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:11.993 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:13.023 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:13.024 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:13.025 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:13.025 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:13.026 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:13.028 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:13.028 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:13.028 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:13.029 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:14.020 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:14.021 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:14.022 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:14.022 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:14.023 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:14.024 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:14.024 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:14.025 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:14.025 DEBUG 18896 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:34:31.871  INFO 5296 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 5296 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-25 16:34:31.876  INFO 5296 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-25 16:34:31.998  INFO 5296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-25 16:34:31.999  INFO 5296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-25 16:34:32.055  WARN 5296 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-25 16:34:33.525  INFO 5296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-25 16:34:33.536  INFO 5296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 16:34:33.537  INFO 5296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-25 16:34:33.632  INFO 5296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 16:34:33.632  INFO 5296 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1631 ms
+2021-04-25 16:34:33.705  INFO 5296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-25 16:34:33.902  INFO 5296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-25 16:34:33.917  INFO 5296 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-25 16:34:34.824  INFO 5296 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 16:34:34.917  INFO 5296 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-25 16:34:35.170  INFO 5296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-25 16:34:35.214  INFO 5296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-25 16:34:35.227  INFO 5296 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 4.556 seconds (JVM running for 6.749)
+2021-04-25 16:34:44.689  INFO 5296 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 16:34:44.690  INFO 5296 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 16:34:44.691  INFO 5296 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-25 16:34:44.790 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-25 16:34:44.811 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-25 16:34:44.830 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-25 16:34:44.832 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-25 16:34:44.839 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-25 16:34:44.847 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-25 16:34:44.848 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-25 16:34:44.854 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-25 16:34:44.855 DEBUG 5296 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-25 16:35:14.374  INFO 7408 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 7408 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-25 16:35:14.379  INFO 7408 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-25 16:35:14.499  INFO 7408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-25 16:35:14.500  INFO 7408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-25 16:35:14.516  WARN 7408 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-25 16:35:15.977  INFO 7408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-25 16:35:15.989  INFO 7408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 16:35:15.989  INFO 7408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-25 16:35:16.076  INFO 7408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 16:35:16.077  INFO 7408 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1576 ms
+2021-04-25 16:35:16.127  INFO 7408 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-25 16:35:16.298  INFO 7408 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-25 16:35:16.313  INFO 7408 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-25 16:35:17.129  INFO 7408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 16:35:17.227  INFO 7408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-25 16:35:17.512  INFO 7408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-25 16:35:17.560  INFO 7408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-25 16:35:17.573  INFO 7408 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 4.117 seconds (JVM running for 6.601)
