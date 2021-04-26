@@ -244,3 +244,72 @@ Identify and stop the process that's listening on port 8887 or configure this ap
 2021-04-26 13:42:20.092  INFO 7112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
 2021-04-26 13:42:20.106  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 1.259 seconds (JVM running for 718.314)
 2021-04-26 13:42:20.110  INFO 7112 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-26 15:31:43.632  INFO 8420 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 8420 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-26 15:31:43.645  INFO 8420 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 15:31:43.823  INFO 8420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-26 15:31:43.824  INFO 8420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-26 15:31:43.894  WARN 8420 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 15:31:46.112  INFO 8420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-26 15:31:46.132  INFO 8420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 15:31:46.134  INFO 8420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 15:31:46.275  INFO 8420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 15:31:46.276  INFO 8420 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2450 ms
+2021-04-26 15:31:46.357  INFO 8420 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-26 15:31:46.621  INFO 8420 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-26 15:31:46.628  INFO 8420 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-26 15:31:48.158  INFO 8420 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 15:31:48.348  INFO 8420 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 15:31:48.943  INFO 8420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 15:31:49.016  INFO 8420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-26 15:31:49.033  INFO 8420 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 6.435 seconds (JVM running for 8.349)
+2021-04-26 15:32:35.349  INFO 8420 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-26 15:32:35.351  INFO 8420 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-26 15:32:35.354  INFO 8420 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-26 15:32:35.493 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2021-04-26 15:32:35.528 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2021-04-26 15:32:35.559 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2021-04-26 15:32:35.561 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create limit ?,? 
+2021-04-26 15:32:35.567 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 6(Integer)
+2021-04-26 15:32:35.576 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.Q.selectBySearch                 : <==      Total: 6
+2021-04-26 15:32:35.577 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-26 15:32:35.580 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-26 15:32:35.581 DEBUG 8420 --- [http-nio-8887-exec-1] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-26 15:32:38.387 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectByPrimaryKey             : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION where ID = ? 
+2021-04-26 15:32:38.387 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectByPrimaryKey             : ==> Parameters: 375(Long)
+2021-04-26 15:32:38.388 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.Q.selectByPrimaryKey             : <==      Total: 1
+2021-04-26 15:32:38.390 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2021-04-26 15:32:38.390 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 650(Long)
+2021-04-26 15:32:38.391 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2021-04-26 15:32:38.392 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.selectRelated  : ==>  Preparing: select * from QUESTION where id != ? and TAG regexp ? 
+2021-04-26 15:32:38.431 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.selectRelated  : ==> Parameters: 375(Long), 标签(String)
+2021-04-26 15:32:38.436 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.QuestionExtMapper.selectRelated  : <==      Total: 5
+2021-04-26 15:32:38.458 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.CommentMapper.selectByExample    : ==>  Preparing: select ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, COMMENT_COUNT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) 
+2021-04-26 15:32:38.458 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.CommentMapper.selectByExample    : ==> Parameters: 375(Long), 1(Integer)
+2021-04-26 15:32:38.461 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.m.CommentMapper.selectByExample    : <==      Total: 13
+2021-04-26 15:32:38.467 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ID in ( ? ) ) 
+2021-04-26 15:32:38.471 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.mapper.UserMapper.selectByExample  : ==> Parameters: 650(Long)
+2021-04-26 15:32:38.472 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.mapper.UserMapper.selectByExample  : <==      Total: 1
+2021-04-26 15:32:38.483 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.mapper.QuestionExtMapper.incView   : ==>  Preparing: update QUESTION set VIEW_COUNT =VIEW_COUNT+ ? where ID = ? 
+2021-04-26 15:32:38.491 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.mapper.QuestionExtMapper.incView   : ==> Parameters: 1(Integer), 375(Long)
+2021-04-26 15:32:38.500 DEBUG 8420 --- [http-nio-8887-exec-8] c.e.f.mapper.QuestionExtMapper.incView   : <==    Updates: 1
+2021-04-26 15:37:37.748  INFO 9264 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 9264 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-26 15:37:37.782  INFO 9264 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 15:37:38.018  INFO 9264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-26 15:37:38.019  INFO 9264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-26 15:37:38.216  WARN 9264 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 15:37:40.973  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-26 15:37:40.991  INFO 9264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 15:37:40.992  INFO 9264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 15:37:41.119  INFO 9264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 15:37:41.120  INFO 9264 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3098 ms
+2021-04-26 15:37:41.251  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-26 15:37:41.838  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-26 15:37:41.847  INFO 9264 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-26 15:37:44.817  INFO 9264 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 15:37:45.161  INFO 9264 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 15:37:45.628  INFO 9264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 15:37:45.684  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-26 15:37:45.701  INFO 9264 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 9.016 seconds (JVM running for 10.803)
+2021-04-26 15:37:54.173  INFO 9264 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-26 15:37:54.173  INFO 9264 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-26 15:37:54.175  INFO 9264 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
