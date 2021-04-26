@@ -194,6 +194,7 @@ Identify and stop the process that's listening on port 8887 or configure this ap
 2021-04-26 10:14:45.979  INFO 19408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-26 10:14:45.982  INFO 19408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-26 10:14:45.987  INFO 19408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+<<<<<<< HEAD
 >>>>>>> 27d193377891cd080d6f81a53d83dd7781a53375
 2021-04-26 12:54:26.773  INFO 1816 --- [main] com.example.forum.ForumApplicationTests  : Starting ForumApplicationTests using Java 1.8.0_292 on 10-23-20-230 with PID 1816 (started by root in /root/forum.mawen)
 2021-04-26 12:54:26.811  INFO 1816 --- [main] com.example.forum.ForumApplicationTests  : No active profile set, falling back to default profiles: default
@@ -301,3 +302,108 @@ Identify and stop the process that's listening on port 8887 or configure this ap
 2021-04-26 13:48:22.589 DEBUG 2191 --- [http-nio-80-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
 2021-04-26 13:48:35.420 DEBUG 2191 --- [http-nio-80-exec-8] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
 2021-04-26 13:51:02.279 DEBUG 2191 --- [http-nio-80-exec-6] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+=======
+2021-04-26 11:21:05.128  INFO 20272 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 20272 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-26 11:21:05.134  INFO 20272 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 11:21:05.229  INFO 20272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-26 11:21:05.229  INFO 20272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-26 11:21:05.278  WARN 20272 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 11:21:07.118  INFO 20272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-26 11:21:07.133  INFO 20272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 11:21:07.134  INFO 20272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 11:21:07.292  INFO 20272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 11:21:07.292  INFO 20272 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2061 ms
+2021-04-26 11:21:07.371  INFO 20272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-26 11:21:07.555  INFO 20272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-26 11:21:07.561  INFO 20272 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-26 11:21:08.285  INFO 20272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 11:21:08.371  INFO 20272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 11:21:08.629  INFO 20272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 11:21:08.674  INFO 20272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-26 11:21:08.686  INFO 20272 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 4.2 seconds (JVM running for 5.858)
+2021-04-26 13:24:36.458  INFO 15488 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 15488 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-26 13:24:36.462  INFO 15488 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 13:24:36.595  INFO 15488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-26 13:24:36.596  INFO 15488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-26 13:24:36.624  WARN 15488 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 13:24:38.141  INFO 15488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-26 13:24:38.151  INFO 15488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 13:24:38.151  INFO 15488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 13:24:38.234  INFO 15488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 13:24:38.235  INFO 15488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1637 ms
+2021-04-26 13:24:38.283  INFO 15488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-26 13:24:38.450  INFO 15488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-26 13:24:38.457  INFO 15488 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-26 13:24:39.254  INFO 15488 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 13:24:39.344  INFO 15488 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 13:24:39.669  INFO 15488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 13:24:39.723  INFO 15488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-26 13:24:39.740  INFO 15488 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 4.256 seconds (JVM running for 6.152)
+2021-04-26 13:30:24.272  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 7112 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-26 13:30:24.278  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 13:30:24.367  INFO 7112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-26 13:30:24.368  INFO 7112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-26 13:30:24.440  WARN 7112 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 13:30:25.942  INFO 7112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2021-04-26 13:30:25.952  INFO 7112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 13:30:25.953  INFO 7112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 13:30:26.035  INFO 7112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 13:30:26.035  INFO 7112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1665 ms
+2021-04-26 13:30:26.089  INFO 7112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-26 13:30:26.259  INFO 7112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-26 13:30:26.266  INFO 7112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-26 13:30:27.051  INFO 7112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 13:30:27.139  INFO 7112 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 13:30:27.394  INFO 7112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 13:30:27.439  INFO 7112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2021-04-26 13:30:27.451  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 3.956 seconds (JVM running for 5.66)
+2021-04-26 13:42:18.616  INFO 7112 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-26 13:42:18.620  INFO 7112 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-26 13:42:18.671  INFO 7112 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-26 13:42:18.891  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : Starting ForumApplication using Java 1.8.0_231 on DESKTOP-5CGBL12 with PID 7112 (D:\IDETest\forum\target\classes started by kingcar in D:\IDETest\forum)
+2021-04-26 13:42:18.892  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 13:42:19.354  INFO 7112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-26 13:42:19.356  INFO 7112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 13:42:19.357  INFO 7112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 13:42:19.405  INFO 7112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 13:42:19.405  INFO 7112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 508 ms
+2021-04-26 13:42:19.435  INFO 7112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-26 13:42:19.456  INFO 7112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-26 13:42:19.456  INFO 7112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/forum'
+2021-04-26 13:42:19.914  INFO 7112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 13:42:19.958  INFO 7112 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 13:42:20.066  INFO 7112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 13:42:20.092  INFO 7112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-26 13:42:20.106  INFO 7112 --- [restartedMain] com.example.forum.ForumApplication       : Started ForumApplication in 1.259 seconds (JVM running for 718.314)
+2021-04-26 13:42:20.110  INFO 7112 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+>>>>>>> 5bd731b5bc12d317e5c0a187898ae8cc3c5cd080
+2021-04-26 14:53:53.116  INFO 2863 --- [main] com.example.forum.ForumApplication       : Starting ForumApplication v0.0.1-SNAPSHOT using Java 1.8.0_292 on 10-23-20-230 with PID 2863 (/root/forum.mawen/target/forum-0.0.1-SNAPSHOT.jar started by root in /root/forum.mawen)
+2021-04-26 14:53:53.263  INFO 2863 --- [main] com.example.forum.ForumApplication       : No active profile set, falling back to default profiles: default
+2021-04-26 14:53:56.077  INFO 2863 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-26 14:53:56.278  INFO 2863 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 14:53:56.379  INFO 2863 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 14:53:56.664  INFO 2863 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 14:53:56.896  INFO 2863 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3421 ms
+2021-04-26 14:53:57.436  WARN 2863 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 14:53:59.201  INFO 2863 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 14:53:59.599  INFO 2863 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 14:54:00.237  INFO 2863 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-26 14:54:00.438  INFO 2863 --- [main] com.example.forum.ForumApplication       : Started ForumApplication in 8.779 seconds (JVM running for 9.648)
+2021-04-26 14:55:09.748  INFO 2890 --- [main] com.example.forum.ForumApplication       : Starting ForumApplication v0.0.1-SNAPSHOT using Java 1.8.0_292 on 10-23-20-230 with PID 2890 (/root/forum.mawen/target/forum-0.0.1-SNAPSHOT.jar started by root in /root/forum.mawen)
+2021-04-26 14:55:09.933  INFO 2890 --- [main] com.example.forum.ForumApplication       : The following profiles are active: production
+2021-04-26 14:55:13.046  INFO 2890 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2021-04-26 14:55:13.318  INFO 2890 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-26 14:55:13.388  INFO 2890 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-26 14:55:13.631  INFO 2890 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-26 14:55:13.807  INFO 2890 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3608 ms
+2021-04-26 14:55:14.378  WARN 2890 --- [main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-26 14:55:16.251  INFO 2890 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 14:55:16.694  INFO 2890 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-26 14:55:17.552  INFO 2890 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2021-04-26 14:55:17.833  INFO 2890 --- [main] com.example.forum.ForumApplication       : Started ForumApplication in 9.564 seconds (JVM running for 10.539)
+2021-04-26 14:55:24.768  INFO 2890 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-26 14:55:24.900  INFO 2890 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-26 14:55:25.042  INFO 2890 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-04-26 14:55:25.253  INFO 2890 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-26 14:55:25.597  INFO 2890 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-26 14:55:25.828 DEBUG 2890 --- [http-nio-80-exec-1] c.e.f.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
