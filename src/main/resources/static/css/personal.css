@@ -40,6 +40,12 @@ body{
     margin: 5px 5px;
     display: inline-block;
 }
+.quesiton-page-padding-top {
+    padding-top: 20px;
+}
+.question-title-bold{
+    font-weight: bold;
+}
 .profile .section{
     margin-top: 24px;
 }
